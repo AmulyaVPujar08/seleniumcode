@@ -80,29 +80,29 @@ break;
 	public static void exercise4(WebDriver driver) throws InterruptedException{
 		{
 			driver.findElement(By.id("checkBoxOption1")).click();//click the check box
-			System.out.println(	driver.findElement(By.id("checkBoxOption1")).isSelected());// displays the  check box is checked
+			System.out.println(	driver.findElement(By.id("checkBoxOption1")).isSelected());//  check box is checked
 			driver.findElement(By.id("checkBoxOption1")).click();
-			Thread.sleep(2000);
-			System.out.println(	driver.findElement(By.id("checkBoxOption1")).isSelected());// displays the check box is unchecked
+			Thread.sleep(3000L);
+			System.out.println(	driver.findElement(By.id("checkBoxOption1")).isSelected());//  check box is unchecked
 			
-			Thread.sleep(2000);
+			Thread.sleep(3000L);
 			
 			//second check box
 			driver.findElement(By.id("checkBoxOption2")).click();//click the check box
-			System.out.println(	driver.findElement(By.id("checkBoxOption2")).isSelected());// displays the  check box is checked
+			System.out.println(	driver.findElement(By.id("checkBoxOption2")).isSelected());// check box is checked
 			driver.findElement(By.id("checkBoxOption2")).click();
-			Thread.sleep(2000);
-			System.out.println(	driver.findElement(By.id("checkBoxOption2")).isSelected());//displays the check box is unchecked
+			Thread.sleep(3000L);
+			System.out.println(driver.findElement(By.id("checkBoxOption2")).isSelected());//check box is unchecked
 
 			
-			Thread.sleep(2000);
+			Thread.sleep(3000L);
 			
 			// third check box
 			driver.findElement(By.id("checkBoxOption3")).click();//click the check box
-			System.out.println(	driver.findElement(By.id("checkBoxOption3")).isSelected());//displays the  check box is checked
+			System.out.println(	driver.findElement(By.id("checkBoxOption3")).isSelected());//check box is checked
 			driver.findElement(By.id("checkBoxOption3")).click();
 			Thread.sleep(2000);
-			System.out.println(	driver.findElement(By.id("checkBoxOption3")).isSelected());//displays the check box is unchecked
+			System.out.println(	driver.findElement(By.id("checkBoxOption3")).isSelected());// check box is unchecked
 		}
 		
 	}
@@ -125,6 +125,7 @@ break;
 			  Thread.sleep(2000);
 			  List<WebElement>AllCheckboxes=driver.findElements(By.xpath("//input[@type='checkbox']"));
 				int size=AllCheckboxes.size();
+			//print the size//
 				System.out.println(size);
 				int i;
 				for( i=0;i<size;i++)
@@ -183,8 +184,8 @@ public static void exercise8(WebDriver driver) throws InterruptedException{
 {
 		
 		JavascriptExecutor js =(JavascriptExecutor)driver;/*creating javascriptExecutor object to tell selinium to run java code*/
-		js.executeScript("window.scrollBy(0,600)");/*movement of window which comes down*/
-		Thread.sleep(500);
+		js.executeScript("window.scrollBy(0,600)");/*movement of window will happen which comes down*/
+		Thread.sleep(600);
 		/*it Verify that  row in the table contains content*/
 		WebElement table=driver.findElement(By.id("product"));
 		List<WebElement> secondrow=table.findElements(By.tagName("tr")).get(0).findElements(By.tagName("th"));
